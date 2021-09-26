@@ -1,0 +1,2 @@
+* 1.0.0 - Sep 25 2021
+- Initial implementation of threading based timeout.
