@@ -4,7 +4,7 @@ import threading
 from functools import partial
 from typing import Any, Callable
 
-from tort.exceptions import FunctionTimeOut
+from tortfunc.exceptions import FunctionTimeOut
 
 
 def threaded_timeout(function: Callable[..., Any], timeout: float) -> Callable[..., Any]:

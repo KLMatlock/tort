@@ -1,4 +1,4 @@
-from tort.registry import Registry
+from tortfunc.registry import Registry
 
 from .thread_timeout import threaded_timeout
 

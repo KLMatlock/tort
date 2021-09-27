@@ -1,5 +1,5 @@
 import pytest
-from tort.registry import Registry
+from tortfunc.registry import Registry
 
 
 def my_func():

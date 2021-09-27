@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "tort"
+name = "tortfunc"
 version = "1.0.1"
 description = "Library for running Python functions with timeout and retry support."
 authors = ["KLMatlock <kevin.matlock@gmail.com>"]
@@ -20,6 +20,7 @@ pytest = "^6.2.5"
 isort = "^5.9.3"
 tox-conda = "^0.8.3"
 bumpver = "^2021.1113"
+twine = "^3.4.2"
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]

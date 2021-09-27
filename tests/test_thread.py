@@ -1,8 +1,8 @@
 from time import time
 
 import pytest
-from tort import FunctionTimeOut
-from tort.timeout.thread_timeout import KillableThread, threaded_timeout
+from tortfunc import FunctionTimeOut
+from tortfunc.timeout.thread_timeout import KillableThread, threaded_timeout
 
 SLEEP_SEC = 2.5
 X1 = 5

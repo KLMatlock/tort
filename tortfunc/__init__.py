@@ -7,4 +7,4 @@ from .exceptions import FunctionTimeOut
 from .retry import retry_function
 
 __all__ = ["FunctionTimeOut", "retry_function"]
-__version__ = version("tort")
+__version__ = version("tortfunc")

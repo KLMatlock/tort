@@ -1,6 +1,6 @@
 import pytest
-from tort import FunctionTimeOut
-from tort.retry import timeout_retry
+from tortfunc import FunctionTimeOut
+from tortfunc.retry import timeout_retry
 
 timeout_manifest = {"method": "thread", "spec": {"timeout": 2.5}}
 
