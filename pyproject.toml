@@ -2,6 +2,7 @@
 name = "tortfunc"
 version = "1.0.1"
 description = "Library for running Python functions with timeout and retry support."
+readme = "README.rst"
 authors = ["KLMatlock <kevin.matlock@gmail.com>"]
 license = "MIT"
 
