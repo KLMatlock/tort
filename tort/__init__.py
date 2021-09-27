@@ -1,4 +1,10 @@
-from .exceptions import FunctionTimeOut
-from .implementations.threaded_timeout import threaded_timeout
+try:
+    from importlib_metadata import version
+except ImportError:
+    from importlib.metadata import version
 
-__all__ = ['FunctionTimeOut', 'threaded_timeout', 'FunctionTimedOut', 'StoppableThread']
+from .exceptions import FunctionTimeOut
+from .retry import retry_function
+
+__all__ = ["FunctionTimeOut", "retry_function"]
+__version__ = version("tort")

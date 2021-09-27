@@ -32,8 +32,30 @@ def sleepy_func_factory() -> callable:
 
 
 @pytest.fixture
+def retriable_func():
+    tries = 0
+
+    def f():
+        nonlocal tries
+        try:
+            if tries != 0:
+                return True
+            while True:
+                time.sleep(0.1)
+        finally:
+            tries = 1
+        return False
+    return f
+
+
+@pytest.fixture
 def infinite_loop():
     def f():
-        while True:
-            time.sleep(0.1)
+        try:
+            while True:
+                time.sleep(0.1)
+        # Prevents unhandled exception with pytest.
+        finally:
+            return
+
     return f

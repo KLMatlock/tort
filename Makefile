@@ -20,7 +20,7 @@ clean-test: ## remove test and coverage artifacts
 	rm -fr .pytest_cache
 
 lint: ## check style with flake8
-	flake8 pathds tests
+	flake8 tort tests --max-line-length 100
 
 test: ## run tests quickly with the default Python
 	pytest
@@ -29,7 +29,7 @@ test-all: ## run tests on every Python version with tox
 	tox
 
 coverage: ## check code coverage quickly with the default Python
-	coverage run --source pathds -m pytest
+	coverage run --source tort -m pytest
 	coverage report -m
 	coverage html
 	$(BROWSER) htmlcov/index.html
@@ -53,13 +53,9 @@ release: dist ## package and upload a release
 	twine upload dist/*
 
 dist: clean ## builds source and wheel package
-	python setup.py sdist
-	python setup.py bdist_wheel
+	poetry build
 	ls -l dist
 
 install: clean ## install the package to the active Python's site-packages
-	python setup.py install
-
-install-dev: clean
-	pip install -r requirements_dev.txt
-	pip install -e .
+	pip install poetry
+	poetry install

@@ -24,8 +24,9 @@ def threaded_timeout(function: Callable[..., Any], timeout: float) -> Callable[.
 
             kill_thread.terminate()
             raise FunctionTimeOut()
-
-        return ret[0]
+        
+        if ret:
+            return ret[0]
 
     return thread_kill_func
 
