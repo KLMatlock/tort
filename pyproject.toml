@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "tortfunc"
-version = "1.0.1"
+version = "1.1.0"
 description = "Library for running Python functions with timeout and retry support."
 readme = "README.rst"
 authors = ["KLMatlock <kevin.matlock@gmail.com>"]
@@ -40,7 +40,7 @@ commands=
     pytest {posargs}
 """
 [tool.bumpver]
-current_version = "1.0.1"
+current_version = "1.1.0"
 version_pattern = "MAJOR.MINOR.PATCH"
 commit_message = "bump version {old_version} -> {new_version}"
 
