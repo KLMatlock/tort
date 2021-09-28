@@ -4,7 +4,7 @@ except ImportError:
     from importlib.metadata import version
 
 from .exceptions import FunctionTimeOut
-from .retry import retry_function
+from .retry import timeout_retry
 
-__all__ = ["FunctionTimeOut", "retry_function"]
+__all__ = ["FunctionTimeOut", "timeout_retry"]
 __version__ = version("tortfunc")

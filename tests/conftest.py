@@ -37,9 +37,9 @@ def retriable_func():
 
     def f():
         nonlocal tries
-        try:
-            if tries != 0:
-                return True
+        if tries != 0:
+            return True
+        try:                
             while True:
                 time.sleep(0.1)
         finally:
